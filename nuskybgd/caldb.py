@@ -167,7 +167,7 @@ class CalDB:
                 cnam, instrument))
             return False
 
-        obsdt = datetime.datetime.strptime(obsutctime, '%Y-%m-%dT%H:%M:%S')
+        obsdt = datetime.datetime.strptime(obsutctime, '%Y-%m-%dT%H:%M:%S.%f')
         startdt = np.array([
             datetime.datetime.strptime('%sT%s' % (
                 vs[0], vs[1]), '%Y-%m-%dT%H:%M:%S')
